@@ -1,0 +1,177 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tweet Sentiment Visualization Dashboard</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sentiment Analysis of Tweets about US Airlines</h2>
+            <p>This application is a streamlit dashboard to analyze the sentiment of Tweets</p>
+            <label>
+                <input type="checkbox" id="randomTweetCheckbox">
+                Show random tweet
+            </label>
+            <div id="randomTweetSection">
+                <label for="sentiment">Sentiment</label>
+                <div>
+                    <input type="radio" name="sentiment" value="positive"> Positive
+                    <input type="radio" name="sentiment" value="neutral"> Neutral
+                    <input type="radio" name="sentiment" value="negative"> Negative
+                </div>
+                <p id="randomTweet">Example tweet text goes here.</p>
+            </div>
+            <label>
+                <input type="checkbox" id="tweetsBySentimentCheckbox">
+                Number of tweets by sentiment
+            </label>
+            <div id="tweetsBySentimentSection">
+                <label for="vizType">Visualization type</label>
+                <select id="vizType">
+                    <option value="histogram">Histogram</option>
+                    <option value="bar">Bar</option>
+                    <option value="line">Line</option>
+                </select>
+                <button id="visualizeButton">Visualize</button>
+                <div id="chart"></div>
+            </div>
+            <label>
+                <input type="checkbox" id="tweetTimingCheckbox">
+                When and Where are users tweeting from?
+            </label>
+            <div id="tweetTimingSection">
+                <label for="hourOfDay">Hour of day</label>
+                <input type="range" id="hourOfDay" name="hourOfDay" min="0" max="23">
+                <p id="selectedHour">Hour: 0</p>
+            </div>
+            <label>
+                <input type="checkbox" id="breakdownCheckbox">
+                Breakdown airline tweets by sentiment
+            </label>
+            <div id="breakdownSection">
+                <label for="airline">Pick airline</label>
+                <select id="airline">
+                    <option value="jetblue">JetBlue</option>
+                    <option value="delta">Delta</option>
+                    <option value="united">United</option>
+                </select>
+                <div id="airlineTweets"></div>
+            </div>
+        </div>
+        <div class="main">
+            <h1>Sentiment Analysis of Tweets about US Airlines</h1>
+            <p>This application is a streamlit dashboard to analyze the sentiment of Tweets</p>
+            <div id="content">
+                <!-- Dynamic content will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="welcome.css"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Tweet Sentiment Visualization Dashboard</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Your Company Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <!--li><a href="#about">About</a></!--li-->
+                    <!-- Add more navigation items as needed -->
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Content Section -->
+    <section id="content">
+        <div class="container">
+            <h1>Welcome to the Interactive Tweet Sentiment Visualization Dashboard</h1>
+            <button id="apiButton">Fetch API Data</button>
+            <div id="apiResult"></div> <!-- This is where the API response will be displayed -->
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sentiment Analysis of Tweets about US Airlines</h2>
+            <p>This application is a streamlit dashboard to analyze the sentiment of Tweets</p>
+            <label>
+                <input type="checkbox" id="randomTweetCheckbox">
+                Show random tweet
+            </label>
+            <div id="randomTweetSection">
+                <label for="sentiment">Sentiment</label>
+                <div>
+                    <input type="radio" name="sentiment" value="positive"> Positive
+                    <input type="radio" name="sentiment" value="neutral"> Neutral
+                    <input type="radio" name="sentiment" value="negative"> Negative
+                </div>
+                <p id="randomTweet">Example tweet text goes here.</p>
+            </div>
+            <label>
+                <input type="checkbox" id="tweetsBySentimentCheckbox">
+                Number of tweets by sentiment
+            </label>
+            <div id="tweetsBySentimentSection">
+                <label for="vizType">Visualization type</label>
+                <select id="vizType">
+                    <option value="histogram">Histogram</option>
+                    <option value="bar">Bar</option>
+                    <option value="line">Line</option>
+                </select>
+                <button id="visualizeButton">Visualize</button>
+                <div id="chart"></div>
+            </div>
+            <label>
+                <input type="checkbox" id="tweetTimingCheckbox">
+                When and Where are users tweeting from?
+            </label>
+            <div id="tweetTimingSection">
+                <label for="hourOfDay">Hour of day</label>
+                <input type="range" id="hourOfDay" name="hourOfDay" min="0" max="23">
+                <p id="selectedHour">Hour: 0</p>
+            </div>
+            <label>
+                <input type="checkbox" id="breakdownCheckbox">
+                Breakdown airline tweets by sentiment
+            </label>
+            <div id="breakdownSection">
+                <label for="airline">Pick airline</label>
+                <select id="airline">
+                    <option value="jetblue">JetBlue</option>
+                    <option value="delta">Delta</option>
+                    <option value="united">United</option>
+                </select>
+                <div id="airlineTweets"></div>
+            </div>
+        </div>
+        <div class="main">
+            <h1>Sentiment Analysis of Tweets about US Airlines</h1>
+            <p>This application is a streamlit dashboard to analyze the sentiment of Tweets</p>
+            <div id="content">
+                <!-- Dynamic content will be displayed here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="welcome.js"></script>
+</body>
+</html>

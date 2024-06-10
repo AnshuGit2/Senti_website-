@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration Example</title>
+</head>
+<body>
+
+    <!-- Your HTML content here -->
+
+    <script>
+        // Define the data to be sent
+        const data = {
+            "data": [
+                "URGENT! You have won a 1 week FREE membership in our £100,000 Prize Jackpot! Txt the word: CLAIM"
+            ]
+        };
+
+        // Make the POST request to your API endpoint
+        fetch("https://sanjayrathore.app.modelbit.com/v1/classifer_text/latest", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response data
+            const score = data['data'][0]['score'];
+            console.log("Score:", score);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    </script>
+
+</body>
+</html>
